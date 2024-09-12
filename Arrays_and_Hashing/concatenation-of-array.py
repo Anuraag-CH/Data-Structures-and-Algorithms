@@ -5,16 +5,13 @@ from typing import List
 
 class Solution:
     def getConcatenation(self, nums: List[int]) -> List[int]:
+        res = []
 
-        n = 2
-        ans = []
+        for i in range(2):
+            for num in nums:
+                res.append(num)
 
-        while n > 0:
-            for i in range(0, len(nums)):
-                ans.append(nums[i])
-            n -= 1
-
-        return ans
+        return res
 
 
 # Time complexity: O(n)
